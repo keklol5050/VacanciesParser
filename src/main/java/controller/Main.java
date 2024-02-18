@@ -13,8 +13,11 @@ public class Main {
 
     public static void initProviders(String query) {
         providers = new ArrayList<>();
-
         providers.add(new Provider(new JobsUAStrategy(query)));
+        providers.add(new Provider(new RabotaUAStrategy(query)));
+        providers.add(new Provider(new WorkUAStrategy(query)));
+        providers.add(new Provider(new DouStrategy(query)));
+        providers.add(new Provider(new OLXStrategy(query)));
     }
 
     public static void stopAll() {
